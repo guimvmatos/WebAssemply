@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo WebAssembly</title>
+  </head>
+  <body>
+    <button onclick="executarWasm()">Clique aqui</button>
+    <script>
+      async function executarWasm() {
+        // Carrega o módulo WebAssembly
+        const modulo = await WebAssembly.instantiateStreaming(fetch('hello-world.wasm'), {});
+
+        // Chama a função que exibe o alerta na tela
+        modulo.instance.exports.helloWorld();
+      }
+    </script>
+  </body>
+</html>
