@@ -27,34 +27,11 @@ sudo apt-get install cmake
 
 emcc -v
 
-### Running emscripten
+### Running the examples
 
-save this code as hello_word.c:
+`go to /teste and run python3 -m http.server 7800`
 
-/*
- * Copyright 2011 The Emscripten Authors.  All rights reserved.
- * Emscripten is available under two separate licenses, the MIT license and the
- * University of Illinois/NCSA Open Source License.  Both these licenses can be
- * found in the LICENSE file.
- */
-
-#include <stdio.h>
-
-int main() {
-  printf("hello, world!\n");
-  return 0;
-}
-
-cd teste
-
-emcc hello_world.c
-
-python3 -m http.server 7800
-
-go to browser and 
-
-
-https://emscripten.org/docs/getting_started/downloads.html
+navigate by the folders in your browser at address `localhost:7800`
 
 ## Tutorial
 
